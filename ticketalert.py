@@ -35,7 +35,7 @@ SCRAPER_API_KEY = "e0a916714723875f6dd476f9baa71af9"
 def check_tickets():
     for url in URLS:
         try:
-            scraper_url = f"http://api.scraperapi.com?api_key={SCRAPER_API_KEY}&url={url}"
+            scraper_url = scraper_url = f"http://api.scraperapi.com?api_key={SCRAPER_API_KEY}&url={url}&render=true"
             headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
             res = requests.get(scraper_url, timeout=30, headers=headers)
             soup = BeautifulSoup(res.text, "html.parser")
@@ -104,3 +104,4 @@ while True:
 
 
     time.sleep(CHECK_INTERVAL)
+
