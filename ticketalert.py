@@ -7,7 +7,7 @@ from datetime import datetime
 
 BOT_TOKEN = "8217134371:AAG4wKoLY0Y5pnfgeSJuEzz_TyUJHDItNTc"
 CHAT_ID = "1153831634"
-CHECK_INTERVAL = 60        # Check every 60 seconds
+CHECK_INTERVAL = 1800        # Check every 60 seconds
 HEARTBEAT_INTERVAL = 1800  # Telegram update every 30 mins
 
 URLS = [
@@ -104,4 +104,5 @@ while True:
 
 
     time.sleep(CHECK_INTERVAL)
+
 
